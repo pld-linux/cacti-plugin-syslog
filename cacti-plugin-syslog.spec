@@ -19,16 +19,24 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		webcactipluginroot /usr/share/cacti/plugins/%{namesrc}
 
 %description
-Plugin for Cacti - h.aloe is a cacti integrated interface to a mysql 
-database that can be used to log events from scripts, cacti or 
+Plugin for Cacti - h.aloe is a cacti integrated interface to a MySQL
+database that can be used to log events from scripts, cacti or
 whatever.
+
 It is the console component for a light weight monitoring addon for
 cacti. Because the database schema is based on syslog,
-it can be configured to use a syslog-ng or kiwi's syslogd for windows
+it can be configured to use a syslog-ng or kiwi's syslogd for Windows
 database so events can be correlated.
 
 %description -l pl
-Wtyczka do Cacti - 
+Wtyczka do Cacti - h.aloe to zintegrowany interfejs cacti do bazy
+danych MySQL, którego mo¿na u¿ywaæ do logowania zdarzeñ ze skryptów,
+cacti czy czegokolwiek.
+
+Jest to sk³adnik konsolowy bêd±cy lekkim dodatkiem do monitorowania
+dla cacti. Poniewa¿ schemat bazy danych jest oparty na syslogu, mo¿e
+byæ skonfigurowany do u¿ywania sysloga-ng lub syslogd z kiwi dla
+Windows, przez co zdarzenia mog± byæ skorelowane.
 
 %prep
 %setup -q -n %{namesrc}
