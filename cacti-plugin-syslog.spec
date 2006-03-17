@@ -51,5 +51,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc readme-haloe.txt
+%doc haloe.txt LICENSE README 
 %{webcactipluginroot}
