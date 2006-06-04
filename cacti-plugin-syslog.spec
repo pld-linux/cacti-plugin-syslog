@@ -3,13 +3,13 @@
 Summary:	Plugin for Cacti - Syslog
 Summary(pl):	Wtyczka do Cacti - Syslog
 Name:		cacti-plugin-syslog
-Version:	0.3
+Version:	0.4
 Release:	0.1
 License:	GPL v2
 Group:		Applications/WWW
 #!!!!problem with version
 Source0:	http://download.cactiusers.org/downloads/%{namesrc}.tar.gz
-# Source0-md5:	1dda3667cd27012d19995ddb37640d3c
+# Source0-md5:	9105635bc1e03565d0e72427eba38127
 URL:		http://www.cactiusers.org/
 BuildRequires:	rpm-perlprov
 Requires:	cacti
