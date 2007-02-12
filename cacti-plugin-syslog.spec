@@ -1,7 +1,7 @@
 %define		namesrc	haloe
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti - Syslog
-Summary(pl.UTF-8):   Wtyczka do Cacti - Syslog
+Summary(pl.UTF-8):	Wtyczka do Cacti - Syslog
 Name:		cacti-plugin-syslog
 Version:	0.4
 Release:	0.1
