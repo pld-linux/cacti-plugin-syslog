@@ -1,7 +1,7 @@
 %define		namesrc	haloe
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti - Syslog
-Summary(pl):	Wtyczka do Cacti - Syslog
+Summary(pl.UTF-8):   Wtyczka do Cacti - Syslog
 Name:		cacti-plugin-syslog
 Version:	0.4
 Release:	0.1
@@ -28,15 +28,15 @@ cacti. Because the database schema is based on syslog,
 it can be configured to use a syslog-ng or kiwi's syslogd for Windows
 database so events can be correlated.
 
-%description -l pl
+%description -l pl.UTF-8
 Wtyczka do Cacti - h.aloe to zintegrowany interfejs cacti do bazy
-danych MySQL, którego mo¿na u¿ywaæ do logowania zdarzeñ ze skryptów,
+danych MySQL, ktÃ³rego moÅ¼na uÅ¼ywaÄ‡ do logowania zdarzeÅ„ ze skryptÃ³w,
 cacti czy czegokolwiek.
 
-Jest to sk³adnik konsolowy bêd±cy lekkim dodatkiem do monitorowania
-dla cacti. Poniewa¿ schemat bazy danych jest oparty na syslogu, mo¿e
-byæ skonfigurowany do u¿ywania sysloga-ng lub syslogd z kiwi dla
-Windows, przez co zdarzenia mog± byæ skorelowane.
+Jest to skÅ‚adnik konsolowy bÄ™dÄ…cy lekkim dodatkiem do monitorowania
+dla cacti. PoniewaÅ¼ schemat bazy danych jest oparty na syslogu, moÅ¼e
+byÄ‡ skonfigurowany do uÅ¼ywania sysloga-ng lub syslogd z kiwi dla
+Windows, przez co zdarzenia mogÄ… byÄ‡ skorelowane.
 
 %prep
 %setup -q -n %{namesrc}
