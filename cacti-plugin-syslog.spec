@@ -1,15 +1,15 @@
-%define		namesrc	haloe
+%define		namesrc	syslog
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti - Syslog
 Summary(pl.UTF-8):	Wtyczka do Cacti - Syslog
 Name:		cacti-plugin-syslog
-Version:	0.4
-Release:	0.1
+Version:	0.5.1
+Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 #!!!!problem with version
-Source0:	http://download.cactiusers.org/downloads/%{namesrc}.tar.gz
-# Source0-md5:	9105635bc1e03565d0e72427eba38127
+Source0:	http://mirror.cactiusers.org/downloads/plugins/%{namesrc}-%{version}.zip
+# Source0-md5:	85f438603c0dcab50b55322374ec26c4
 URL:		http://www.cactiusers.org/
 BuildRequires:	rpm-perlprov
 Requires:	cacti
@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		webcactipluginroot /usr/share/cacti/plugins/%{namesrc}
 
 %description
-Plugin for Cacti - h.aloe is a cacti integrated interface to a MySQL
+Plugin for Cacti - Syslog is a cacti integrated interface to a MySQL
 database that can be used to log events from scripts, cacti or
 whatever.
 
@@ -29,7 +29,7 @@ it can be configured to use a syslog-ng or kiwi's syslogd for Windows
 database so events can be correlated.
 
 %description -l pl.UTF-8
-Wtyczka do Cacti - h.aloe to zintegrowany interfejs cacti do bazy
+Wtyczka do Cacti - Syslog to zintegrowany interfejs cacti do bazy
 danych MySQL, którego można używać do logowania zdarzeń ze skryptów,
 cacti czy czegokolwiek.
 
@@ -39,7 +39,7 @@ być skonfigurowany do używania sysloga-ng lub syslogd z kiwi dla
 Windows, przez co zdarzenia mogą być skorelowane.
 
 %prep
-%setup -q -n %{namesrc}
+%setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
