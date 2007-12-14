@@ -4,7 +4,7 @@ Summary:	Plugin for Cacti - Syslog
 Summary(pl.UTF-8):	Wtyczka do Cacti - Syslog
 Name:		cacti-plugin-syslog
 Version:	0.5.1
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/WWW
 #!!!!problem with version
@@ -51,5 +51,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc haloe.txt README 
+%doc README LICENSE 
 %{webcactipluginroot}
