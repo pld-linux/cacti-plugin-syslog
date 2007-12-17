@@ -10,6 +10,7 @@ Group:		Applications/WWW
 #!!!!problem with version
 Source0:	http://mirror.cactiusers.org/downloads/plugins/%{namesrc}-%{version}.zip
 # Source0-md5:	85f438603c0dcab50b55322374ec26c4
+Patch0:		%{name}-config.patch
 URL:		http://www.cactiusers.org/
 BuildRequires:	rpm-perlprov
 Requires:	cacti
@@ -40,6 +41,7 @@ Windows, przez co zdarzenia mogą być skorelowane.
 
 %prep
 %setup -q -c
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT

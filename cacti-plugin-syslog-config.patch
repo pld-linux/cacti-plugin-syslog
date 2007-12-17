@@ -1,0 +1,10 @@
+--- cacti-plugin-syslog-0.5.1/config.php.orig	2007-12-17 10:06:33.000000000 +0000
++++ cacti-plugin-syslog-0.5.1/config.php	2007-12-17 10:10:35.000000000 +0000
+@@ -57,4 +57,5 @@
+ $syslog_text_colors['info']		= '';
+ $syslog_text_colors['debug']		= '';
+ 
+-?>
+\ No newline at end of file
++include '/etc/cacti/plugin-syslog.cfg';
++?>
