@@ -1,4 +1,4 @@
-%define		namesrc	syslog
+%define		plugin	syslog
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti - Syslog
 Summary(pl.UTF-8):	Wtyczka do Cacti - Syslog
@@ -7,8 +7,7 @@ Version:	0.5.2
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-#!!!!problem with version
-Source0:	http://mirror.cactiusers.org/downloads/plugins/%{namesrc}-%{version}.zip
+Source0:	http://mirror.cactiusers.org/downloads/plugins/%{plugin}-%{version}.zip
 # Source0-md5:	1e2b1fc5b560452f937ccd0bca1af0a2
 Patch0:		%{name}-config.patch
 URL:		http://www.cactiusers.org/
@@ -17,7 +16,8 @@ Requires:	cacti
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		webcactipluginroot /usr/share/cacti/plugins/%{namesrc}
+%define		cactidir		/usr/share/cacti
+%define		plugindir		%{cactidir}/plugins/%{plugin}
 
 %description
 Plugin for Cacti - Syslog is a cacti integrated interface to a MySQL
@@ -25,9 +25,9 @@ database that can be used to log events from scripts, cacti or
 whatever.
 
 It is the console component for a light weight monitoring addon for
-cacti. Because the database schema is based on syslog,
-it can be configured to use a syslog-ng or kiwi's syslogd for Windows
-database so events can be correlated.
+cacti. Because the database schema is based on syslog, it can be
+configured to use a syslog-ng or kiwi's syslogd for Windows database
+so events can be correlated.
 
 %description -l pl.UTF-8
 Wtyczka do Cacti - Syslog to zintegrowany interfejs cacti do bazy
@@ -45,13 +45,13 @@ Windows, przez co zdarzenia mogą być skorelowane.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{webcactipluginroot}
-cp -a * $RPM_BUILD_ROOT%{webcactipluginroot}
+install -d $RPM_BUILD_ROOT%{plugindir}
+cp -a . $RPM_BUILD_ROOT%{plugindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README LICENSE 
-%{webcactipluginroot}
+%doc README LICENSE
+%{plugindir}
