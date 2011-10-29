@@ -5,7 +5,7 @@ Summary:	Syslog Viewer for Cacti
 Summary(pl.UTF-8):	Wtyczka do Cacti - Syslog
 Name:		cacti-plugin-%{plugin}
 Version:	1.22
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://docs.cacti.net/_media/plugin:syslog-v%{version}-1.tgz
@@ -22,6 +22,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		cactidir		/usr/share/cacti
 %define		plugindir		%{cactidir}/plugins/%{plugin}
+
+# bad depsolver
+%define		_noautopear	pear
+
+# put it together for rpmbuild
+%define		_noautoreq	%{?_noautophp} %{?_noautopear}
 
 %description
 A comprehensive Syslog Alerting tool that support very large
