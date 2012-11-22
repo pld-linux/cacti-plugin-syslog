@@ -1,15 +1,16 @@
 %define		plugin	syslog
+%define		ver	%(echo %{version} |tr _ -)
 %define		php_min_version 5.0.0
 %include	/usr/lib/rpm/macros.php
 Summary:	Syslog Viewer for Cacti
 Summary(pl.UTF-8):	Wtyczka do Cacti - Syslog
 Name:		cacti-plugin-%{plugin}
-Version:	1.22
-Release:	7
+Version:	1.22_2
+Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	http://docs.cacti.net/_media/plugin:syslog-v%{version}-1.tgz
-# Source0-md5:	bed7d51a915e6dd0813766a09c31f2fe
+Source0:	http://docs.cacti.net/_media/plugin:syslog-v%{ver}.tgz
+# Source0-md5:	4a0fba97825db5333754cc2fc4aeb9e6
 URL:		http://docs.cacti.net/plugin:syslog
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	cacti
